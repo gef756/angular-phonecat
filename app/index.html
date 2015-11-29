@@ -9,11 +9,14 @@
   <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="PhoneListCtrl">
+  <h1>Phones</h1>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2">
         <!-- sidebar content -->
         Search: <input ng-model="query">
+        <p>You are searching for: <strong>{{query}}</strong></p>
       </div>
       <div class="col-md-10">
         <!-- body content -->
@@ -27,6 +30,7 @@
     </div>
   </div>
 
+  <h1>Testing 1, 2, 3...?</h1>
   <p>Hello, {{name}}!</p>
   <p>Nothing here {{'yet' + '!'}}</p>
   <p>1 + 2 = {{ 1 + 2 }}</p>
