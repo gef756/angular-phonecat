@@ -16,6 +16,6 @@ phonecatApp.controller('PhoneListCtrl', function ($scope) {
      'snippet': 'The Next, Next Generation tablet.',
      'age': 3}
   ];
-  $scope.orderProp = 'age';
+  // $scope.orderProp = 'age';
   $scope.name = "World";
 });
