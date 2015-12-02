@@ -32,6 +32,8 @@
         <ul class="phones">
           <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
               class="thumbnail">
+            <!-- using ng-src vs. src prevents browser from making a call
+              requesting the invalid url containing the braces -->
             <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
             <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
             <p>{{phone.snippet}}</p>
