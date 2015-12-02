@@ -21,14 +21,14 @@ describe('PhoneCat App', function() {
 
     it('should filter the phone list as a user types into the search box',
         function() {
-          expect(phoneList.count()).toBe(3);
+          expect(phoneList.count()).toBe(20);
 
           query.sendKeys('nexus');
           expect(phoneList.count()).toBe(1);
 
           query.clear();
           query.sendKeys('motorola');
-          expect(phoneList.count()).toBe(2);
+          expect(phoneList.count()).toBe(8);
         });
 
     it('should display the current filter value in the title bar', function() {
@@ -55,7 +55,7 @@ describe('PhoneCat App', function() {
 
           expect(getNames()).toEqual([
             "Motorola XOOM\u2122 with Wi-Fi",
-            "Motorola XOOM\u2122"
+            "MOTOROLA XOOM\u2122"
           ]);
 
           element(by.model('orderProp'))
@@ -63,7 +63,7 @@ describe('PhoneCat App', function() {
             .click();
 
           expect(getNames()).toEqual([
-            "Motorola XOOM\u2122",
+            "MOTOROLA XOOM\u2122",
             "Motorola XOOM\u2122 with Wi-Fi"
           ]);
         });
