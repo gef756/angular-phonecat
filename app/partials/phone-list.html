@@ -1,0 +1,57 @@
+  <h1>Phones</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- sidebar content -->
+      Search: <input ng-model="query">
+      <p>You are searching for: <strong>{{query}}</strong></p>
+
+      <h4>Sort by:</h4>
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+        <option value="-age">Oldest</option>
+      </select>
+      <p>You are currently sorting by: <strong>{{orderProp}}</strong></p>
+
+    </div>
+    <div class="col-md-10">
+      <!-- body content -->
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
+            class="thumbnail">
+          <!-- using ng-src vs. src prevents browser from making a call
+            requesting the invalid url containing the braces -->
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h1>Testing 1, 2, 3...?</h1>
+<p>Hello, {{name}}!</p>
+<p>Nothing here {{'yet' + '!'}}</p>
+<p>1 + 2 = {{ 1 + 2 }}</p>
+
+<!--  <ul>
+  <li ng-repeat="phone in phones">
+    <span>{{phone.name}}</span>
+    <p>{{phone.snippet}}</p>
+  </li>
+</ul> -->
+
+<p>Total number of phones: {{phones.length}}</p>
+
+<table>
+  <tr><th>row number</th></tr>
+  <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]">
+    <td>{{i + 1}}</td>
+  </tr>
+</table>
+
+<h2>Raw Data</h2>
+<pre>{{phones | filter:query | orderBy:orderProp | json}}</pre>
