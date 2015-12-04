@@ -3,12 +3,11 @@
 /* jasmine specs for controllers go here */
 
 describe('PhoneCat controllers', function() {
+  beforeEach(module('phonecatApp'));
 
   describe('PhoneListCtrl', function() {
     var scope, ctrl;
     var $httpBackend;
-
-    beforeEach(module('phonecatApp'));
 
     // Injector ignores leading and trailing underscores
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
