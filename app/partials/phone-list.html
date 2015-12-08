@@ -36,6 +36,15 @@
 <p>Hello, {{name}}!</p>
 <p>Nothing here {{'yet' + '!'}}</p>
 <p>1 + 2 = {{ 1 + 2 }}</p>
+<h3>Filters</h3>
+<ul>
+  <li>{{"lower cap string" | uppercase}}</li>
+  <li>{{ {foo: 'bar', baz: 23} | json}}</li>
+  <li>{{1304375948024 | date}}</li>
+  <li>{{1304375948024 | date: "MM/dd/yyyy @ h:mma" }}</li>
+</ul>
+
+<input ng-model="userInput"> --&gt; Uppercased: {{ userInput | uppercase }}
 
 <!--  <ul>
   <li ng-repeat="phone in phones">
