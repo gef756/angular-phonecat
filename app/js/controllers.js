@@ -28,4 +28,8 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
     $scope.setImage = function(imageUrl) {
       $scope.mainImageUrl = imageUrl;
     };
+
+    $scope.hello = function(name) {
+      alert('Hello ' + (name || 'world') + '!');
+    };
   }]);
