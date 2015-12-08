@@ -93,5 +93,8 @@ describe('PhoneCat App', function() {
       expect(element(by.binding('phone.name')).getText()).toBe('Nexus S');
     });
 
+    it('should display 4 thumbnail images', function() {
+      expect(element.all(by.css('.phone-thumbs img')).count()).toBe(4);
+    });
   });
 });
