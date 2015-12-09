@@ -20,7 +20,7 @@
       <!-- body content -->
       <ul class="phones">
         <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
-            class="thumbnail">
+            class="thumbnail phone-listing">
           <!-- using ng-src vs. src prevents browser from making a call
             requesting the invalid url containing the braces -->
           <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
