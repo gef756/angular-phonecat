@@ -4,6 +4,15 @@ body {
   padding: 20px;
 }
 
+.phone-images {
+  float: left;
+  background-color: white;
+  height: 450px;
+  width: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
 .phones {
   list-style: none;
 }
@@ -25,13 +34,17 @@ body {
 /* For the Detailed View */
 img.phone {
   float: left;
-  border: 1px solid black;
   margin-right: 3em;
   margin-bottom: 2em;
   background-color: white;
   padding: 2em;
   height: 400px;
   width: 400px;
+  display: none;
+}
+
+img.phone:first-child {
+  display: block;
 }
 
 ul.phone-thumbs {
