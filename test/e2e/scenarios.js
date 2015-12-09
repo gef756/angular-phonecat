@@ -99,19 +99,19 @@ describe('PhoneCat App', function() {
 
     it('should display the first phone image as the main phone image',
       function() {
-        expect(element(by.css('img.phone')).getAttribute('src'))
+        expect(element(by.css('img.phone.active')).getAttribute('src'))
           .toMatch(/img\/phones\/nexus-s.0.jpg/);
     });
 
     it('should swap main image if a thumbnail is clicked on', function() {
       // try clicking on 3rd image
       element(by.css('.phone-thumbs li:nth-child(3) img')).click();
-      expect(element(by.css('img.phone')).getAttribute('src'))
+      expect(element(by.css('img.phone.active')).getAttribute('src'))
         .toMatch(/img\/phones\/nexus-s.2.jpg/);
 
       // try clicking on 1st image
       element(by.css('.phone-thumbs li:nth-child(1) img')).click();
-      expect(element(by.css('img.phone')).getAttribute('src'))
+      expect(element(by.css('img.phone.active')).getAttribute('src'))
         .toMatch(/img\/phones\/nexus-s.0.jpg/);
     });
   });
